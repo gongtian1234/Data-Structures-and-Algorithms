@@ -7,7 +7,7 @@ def bubble_sort(alist):
     n = len(li)
     for j in range(0, n-1):    # 总共需要走 n-1 次
         count = 0
-        for i in range(0, n-1):    # 第一次游标i需要走 n-1 次(此时 j=0),第二次游标i需要走 n-2 次( j=1 )
+        for i in range(0, n-1-j):    # 第一次游标i需要走 n-1 次(此时 j=0),第二次游标i需要走 n-2 次( j=1 )【先创建内层循环，再外层循环】
             if alist[i] > alist[i+1]:
                 alist[i], alist[i+1] = alist[i+1], alist[i]
                 count += 1
